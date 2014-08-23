@@ -1,0 +1,48 @@
+﻿@model IEnumerable<StockManagementSystem.Models.stock>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table table-striped table-hover ">
+    <thead>
+        <tr>
+            <th>
+               Product Name
+            </th>
+            <th>
+               Warehouse Name
+            </th>
+            <th>
+               Quantity
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Product.product_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Warehouse.warehouse_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.qty)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.stock_id }) |
+            @Html.ActionLink("Details", "Details", new { id = item.stock_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.stock_id })
+            </td>
+        </tr>
+    }
+
+</table>

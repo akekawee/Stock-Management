@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="DataSource">
+  <ConnectionProperties>
+    <Extension>ODBC</Extension>
+    <ConnectString>Driver=MySQL ODBC 5.3 ANSI Driver;server=localhost;database=stockmanagement;port=3306</ConnectString>
+  </ConnectionProperties>
+  <DataSourceID>0344df88-f736-452d-a2d9-b6417825c273</DataSourceID>
+</RptDataSource>

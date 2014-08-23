@@ -1,0 +1,60 @@
+﻿@model StockManagementSystem.Models.stock
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>stock</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.stock_id)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.stock_id)
+            @Html.ValidationMessageFor(model => model.stock_id)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.product_id, "Product")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("product_id", String.Empty)
+            @Html.ValidationMessageFor(model => model.product_id)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.warehouse_id, "Warehouse")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("warehouse_id", String.Empty)
+            @Html.ValidationMessageFor(model => model.warehouse_id)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.qty)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.qty)
+            @Html.ValidationMessageFor(model => model.qty)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

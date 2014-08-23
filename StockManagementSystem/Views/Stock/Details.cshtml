@@ -1,0 +1,43 @@
+﻿@model StockManagementSystem.Models.stock
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>stock</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.stock_id)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.stock_id)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Product.product_name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Product.product_name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Warehouse.warehouse_name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Warehouse.warehouse_name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.qty)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.qty)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
